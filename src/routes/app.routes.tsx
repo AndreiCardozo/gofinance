@@ -1,15 +1,16 @@
 import React from 'react';
-import {Platform} from 'react-native';
+import { Platform } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useTheme } from 'styled-components';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import { Dashboard } from '../screens/Dashboard';
 import { Register } from '../screens/Register';
+import { Resume } from '../screens/Resume';
 
-const {Navigator, Screen} = createBottomTabNavigator();
+const { Navigator, Screen } = createBottomTabNavigator();
 
-export function AppRoutes(){
+export function AppRoutes() {
   const theme = useTheme();
   return (
     <Navigator
@@ -27,7 +28,7 @@ export function AppRoutes(){
         name="Listagem"
         component={Dashboard}
         options={{
-          tabBarIcon: (({size, color}) => (
+          tabBarIcon: (({ size, color }) => (
             <MaterialIcons
               size={size}
               color={color}
@@ -41,7 +42,7 @@ export function AppRoutes(){
         name="Cadastrar"
         component={Register}
         options={{
-          tabBarIcon: (({size, color}) => (
+          tabBarIcon: (({ size, color }) => (
             <MaterialIcons
               size={size}
               color={color}
@@ -53,9 +54,9 @@ export function AppRoutes(){
 
       <Screen
         name="Resumo"
-        component={Register}
+        component={Resume}
         options={{
-          tabBarIcon: (({size, color}) => (
+          tabBarIcon: (({ size, color }) => (
             <MaterialIcons
               size={size}
               color={color}
